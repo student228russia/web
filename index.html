@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Форма HTML</title>
+  </head>
+
+  <body>
+
+    <h1>Форма HTML</h1>
+
+    <form action="/"
+      method="POST">
+
+
+      <label>
+        Текстовое поле ФИО:<br />
+        <input name="field-email"
+          type="email"
+          placeholder="Фамилия" />
+ <br />
+ <input name="field-email"
+          type="email"
+          placeholder="Имя" />
+ <br />
+ <input name="field-email"
+          type="email"
+          placeholder="Отчество" />
+      </label><br />
+
+      <label>
+        Телефон:<br />
+        <input name="field-phone"
+          type="phone_number"
+          placeholder="Телефон" />
+ </label><br />
+
+      <label>
+        e-mail:<br />
+        <input name="field-email"
+          type="email"
+          placeholder="email" />
+ </label><br />
+
+      <label>
+        Дата рождеия:<br />
+        <input name="field-date"
+          value="2019-08-13"
+          type="date" />
+      </label><br />
+Пол:<br />
+      <label><input type="radio" checked="checked"
+        name="radio-group-1" value="Значение1" />
+        Мужской </label>
+      <label><input type="radio"
+        name="radio-group-1" value="Значение2" />
+        Женский</label><br />
+
+      <label>
+        любимый язык программирования:
+        <br />
+        <select name="field-name-4[]"
+          multiple="multiple">
+          <option value="Значение1">Pascal</option>
+          <option value="Значение2" selected="selected">C</option>
+          <option value="Значение3" selected="selected">C++</option>
+          <option value="Значение2" selected="selected">JavaScript</option>
+          <option value="Значение3" selected="selected">PHP</option>
+        </select>
+      </label><br />
+
+
+      Чекбокс:<br />
+      <label><input type="checkbox" checked="checked"
+        name="check-1" />
+        С контрактом ознакомлен</label><br />
+
+      Кнопка отправки формы,
+      при нажатии заполненные в форму данные
+      отправятся в формате urlencoded методом
+      POST или GET по адресу URL_отправки_данных:
+      <input type="submit" value="Отправить" />
+    </form>
+
+  </body>
+
+</html>
