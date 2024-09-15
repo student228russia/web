@@ -15,7 +15,7 @@
 
 
       <label>
-        Текстовое поле ФИО:<br />
+        Текстовое поле ФИО студента:<br />
         <input name="field-email"
           type="email"
           placeholder="Фамилия" />
@@ -63,9 +63,9 @@
         <select name="field-name-4[]"
           multiple="multiple">
           <option value="Значение1">Pascal</option>
+          <option value="Значение2" selected="selected">C++</option>
+          <option value="Значение3" selected="selected">java</option>
           <option value="Значение2" selected="selected">C</option>
-          <option value="Значение3" selected="selected">C++</option>
-          <option value="Значение2" selected="selected">JavaScript</option>
           <option value="Значение3" selected="selected">PHP</option>
         </select>
       </label><br />
@@ -77,7 +77,6 @@
         С контрактом ознакомлен</label><br />
 
       Кнопка отправки формы,
-      при нажатии заполненные в форму данные
       отправятся в формате urlencoded методом
       POST или GET по адресу URL_отправки_данных:
       <input type="submit" value="Отправить" />
