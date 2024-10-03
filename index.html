@@ -12,7 +12,7 @@ HTML 5 Страница с маркированным списком гипер�
     <ul>
         <li><a href="http://kubsu.ru">Главная страница сайта kubsu.ru</a></li>
         <li><a href="https://kubsu.ru">Главная сайта kubsu.ru в протоколе HTTPS</a></li>
-        <li><a href="https://example.com/image.jpg"><img src="image.jpg" alt="Ссылка-изображение" /></a></li>
+        <li><a href="image.jpg">Ссылка-изображение</a></li>
         <li><a href="/page">Сокращенная ссылка на внутреннюю страницу</a></li>
         <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
         <li><a href="#fragment">Ссылка на фрагмент текущей страницы</a></li>
@@ -25,7 +25,7 @@ HTML 5 Страница с маркированным списком гипер�
         <li><p>Контекстная <a href="https://example.com">ссылка в тексте абзаца</a>.</p></li>
         <li><a href="https://externalsite.com#section">Ссылка на фрагмент страницы стороннего сайта</a></li>
         <li>
-            <img src="https://example.com/map.jpg" usemap="#map">
+            <img src="image.jpg" width="300" height="200" alt="Карта" usemap="#map">
             <map name="map">
                 <area shape="rect" coords="34,44,270,350" href="https://example.com/rect-link" alt="Ссылка в прямоугольной области" />
                 <area shape="circle" coords="337,300,44" href="https://example.com/circle-link" alt="Ссылка в круглой области" />
@@ -46,18 +46,76 @@ HTML 5 Страница с маркированным списком гипер�
     </ul>
 
     <h2>Форма</h2>
-    <form action="/submit" method="post">
-        <label for="name">Имя:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <input type="submit" value="Отправить">
-    </form>
+    <form action="/"
+    method="POST">
+
+    <label>
+      ФИО:<br />
+      <input name="fio"
+      placeholder="Введите ФИО" />
+    </label><br />
+
+    <label>
+        Номер телефона:<br />
+        <input name="field-phone"
+          type="tel"
+          placeholder="Введите номер телефона" />
+      </label><br />
+
+    <label>
+       Email:<br />
+      <input name="field-email"
+        type="email"
+        placeholder="Введите вашу почту" />
+    </label><br />
+
+    <label>
+      Введите дату рождения:<br />
+      <input name="field-date"
+        type="date" />
+    </label><br />
+
+    Пол:<br />
+    <label><input type="radio"
+      name="radio-group1" value="Мужской" />
+      Мужской</label>
+    <label><input type="radio"
+      name="radio-group1" value="Женский" />
+      Женский</label><br />
+
+      <label>
+        Любимый язык программирования:
+        <br />
+        <select name="field-name-4[]"
+          multiple="multiple">
+          <option value="Значение1">Pascal</option>
+          <option value="Значение2">C</option>
+          <option value="Значение3">C++</option>
+          <option value="Значение4">JavaScript</option>
+          <option value="Значение5">PHP</option>
+          <option value="Значение6">Python</option>
+          <option value="Значение7">Java</option>
+          <option value="Значение8">Haskel</option>
+          <option value="Значение9">Clojure</option>
+          <option value="Значение10">Prolog</option>
+          <option value="Значение11">Scala</option>
+        </select>
+      </label><br />
+    <label>
+        Биография:<br />
+        <textarea name="field-name-2"></textarea>
+      </label><br />
+
+
+
+    <br />
+    <label><input type="checkbox" checked="checked"
+      name="check-1" />
+    С контрактом ознакомлен (а)</label><br />
+
+    <input type="submit" value="Сохранить" />
+  </form>
 </body>
 </html>
 
 Конец HTML кода
-
-  </body>
-
-</html>
