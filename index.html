@@ -1,121 +1,208 @@
 HTML 5 Страница с маркированным списком гиперссылок и формой
 
-<!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Гиперссылки и форма</title>
+    <title>Титл</title>
+    <style>
+        body {
+            margin: 0; 
+            background-color: rgb(41, 84, 105);
+        }
+        .header {
+            width: 100%; 
+            background-color: #4f6b79; 
+            padding: 10px; 
+            height: 120px;
+        }
+        .header img {
+            float: left; 
+            margin: 10px; 
+            width: 100px; 
+            height: 100px;
+        }
+        .menu {
+            background-color: #8da3b3; 
+            padding: 10px; 
+            margin-right: auto;
+        }
+        .content {
+            max-width: 800px; 
+            background-color: #ffffff; 
+            margin: 0 auto; 
+            margin-top: 20px; 
+            padding: 10px; 
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #000000; 
+            color: white;
+            padding: 10px;
+        }
+        td {
+            text-align: center;
+            padding: 8px;
+        }
+        .white {
+            background-color: #ffffff;
+        }
+        .red {
+            background-color: #c96b6b;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Маркированный список гиперссылок</h1>
-    <ul>
-        <li><a href="http://kubsu.ru">Главная страница сайта kubsu.ru</a></li>
-        <li><a href="https://kubsu.ru">Главная сайта kubsu.ru в протоколе HTTPS</a></li>
-        <li><a href="image.jpg">Ссылка-изображение</a></li>
-        <li><a href="/page">Сокращенная ссылка на внутреннюю страницу</a></li>
-        <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
-        <li><a href="#fragment">Ссылка на фрагмент текущей страницы</a></li>
-        <li><a href="/page?param1=value1&param2=value2&param3=value3">Ссылка с тремя параметрами в URL</a></li>
-        <li><a href="/page?id=123">Ссылка с параметром id в URL</a></li>
-        <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-        <li><a href="about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
-        <li><a href="../page.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-        <li><a href="../../page.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-        <li><p>Контекстная <a href="https://example.com">ссылка в тексте абзаца</a>.</p></li>
-        <li><a href="https://externalsite.com#section">Ссылка на фрагмент страницы стороннего сайта</a></li>
-        <li>
-            <img src="image.jpg" width="300" height="200" alt="Карта" usemap="#map">
-            <map name="map">
-                <area shape="rect" coords="34,44,270,350" href="https://example.com/rect-link" alt="Ссылка в прямоугольной области" />
-                <area shape="circle" coords="337,300,44" href="https://example.com/circle-link" alt="Ссылка в круглой области" />
-            </map>
-        </li>
-        <li><a href="#">Ссылка с пустым href</a></li>
-        <li><a>Ссылка без href</a></li>
-        <li><a rel="nofollow" href="https://example.com">Ссылка, по которой запрещен переход поисковикам</a></li>
-        <li><a rel="noindex" href="https://example.com">Запрещенная для индексации поисковиками ссылка</a></li>
-        <li>
-            <ol>
-                <li><a href="http://example.com" title="Ссылка 1">Ссылка 1</a></li>
-                <li><a href="http://example.com" title="Ссылка 2">Ссылка 2</a></li>
-                <li><a href="http://example.com" title="Ссылка 3">Ссылка 3</a></li>
-            </ol>
-        </li>
-        <li><a href="ftp://username:password@ftp.example.com/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
-    </ul>
+    <div class="header">
+        <img src="https://avatars.mds.yandex.net/i?id=457a4cea99249ad6edf2085516e3186b0c995ac2-7909006-images-thumbs&n=13" alt="Цветок" />
+        <div class="menu">
+            <a href="">Пункт меню 1</a> 
+            <a href="">Пункт меню 2</a> 
+            <a href="">Пункт меню 3</a> 
+            <a href="">Пункт меню 4</a>
+            <br>
+            <p style='font-size:30px; font-weight:100; font-family: Geneva, Arial, Helvetica, sans-serif;'>Название сайта</p>
+        </div>
+    </div>
 
-    <h2>Форма</h2>
-    <form action="/"
-    method="POST">
+    <div class="content">
+        <ul>
+            <li><h2>Список гиперссылок</h2></li>
+            <li><a href="http://kubsu.ru/"><h3>КубГу</h3></a></li>
+            <li><a href="http://kubsu.ru/"><h3>КубГу</h3></a></li>
+            <li><a href="http://kubsu.ru/"><h3>КубГу</h3></a></li>
+            <li><a href="http://kubsu.ru/"><h3>КубГу</h3></a></li>
+            <li><a href="http://kubsu.ru/"><h3>КубГу</h3></a></li>
+            <li><a href="http://kubsu.ru/"><h3>КубГу</h3></a></li>
+        </ul>
+    </div>
 
-    <label>
-      ФИО:<br />
-      <input name="fio"
-      placeholder="Введите ФИО" />
-    </label><br />
+    <div class="content">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="3">Заголовок</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="red">инфа</td>
+                    <td class="white">инфа</td>
+                    <td class="red">инфа</td>
+                </tr>
+                <tr>
+                    <td class="white">инфа</td>
+                    <td class="white">инфа</td>
+                    <td class="white">инфа</td>
+                </tr>
+                <tr>
+                    <td class="red">инфа</td>
+                    <td class="white">инфа</td>
+                    <td class="red">инфа</td>
+                </tr>
+                <tr>
+                    <td class="white" colspan="3">совмещенныая инфа</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="content">
+        <form id="myForm" action="/" method="POST" onsubmit="return validateForm()">
+            <label>
+                Однострочное текстовое поле:<br />
+                <input name="fieldname1" id="fieldname1" required />
+            </label><br />
+            <div id="errorFieldname1" class="error-message"></div>
 
-    <label>
-        Номер телефона:<br />
-        <input name="field-phone"
-          type="tel"
-          placeholder="Введите номер телефона" />
-      </label><br />
+            <label>
+                Текстовое поле email:<br />
+                <input name="fieldemail" id="fieldemail" type="email" placeholder="Введите почту" required />
+            </label><br />
+            <div id="errorFieldemail" class="error-message"></div>
 
-    <label>
-       Email:<br />
-      <input name="field-email"
-        type="email"
-        placeholder="Введите вашу почту" />
-    </label><br />
+            <label>
+                Текстовое поле даты:<br />
+                <input name="fielddate" id="fielddate" value="2024-09-18" type="date" required />
+            </label><br />
+            <div id="errorFielddate" class="error-message"></div>
 
-    <label>
-      Введите дату рождения:<br />
-      <input name="field-date"
-        type="date" />
-    </label><br />
+            <label>
+                Многострочное текстовое поле:<br />
+                <textarea name="fieldname2" id="fieldname2" required>начальное значение</textarea>
+            </label><br />
+            <div id="errorFieldname2" class="error-message"></div>
 
-    Пол:<br />
-    <label><input type="radio"
-      name="radio-group1" value="Мужской" />
-      Мужской</label>
-    <label><input type="radio"
-      name="radio-group1" value="Женский" />
-      Женский</label><br />
+            <label>
+                Список combobox:<br />
+                <select name="fieldname3" id="fieldname3" required>
+                    <option value="">Выберите значение</option>
+                    <option value="Значение1">Метка1</option>
+                    <option value="Значение2">Метка2</option>
+                    <option value="Значение3">Метка3</option>
+                </select>
+            </label><br />
+            <div id="errorFieldname3" class="error-message"></div>
 
-      <label>
-        Любимый язык программирования:
-        <br />
-        <select name="field-name-4[]"
-          multiple="multiple">
-          <option value="Значение1">Pascal</option>
-          <option value="Значение2">C</option>
-          <option value="Значение3">C++</option>
-          <option value="Значение4">JavaScript</option>
-          <option value="Значение5">PHP</option>
-          <option value="Значение6">Python</option>
-          <option value="Значение7">Java</option>
-          <option value="Значение8">Haskel</option>
-          <option value="Значение9">Clojure</option>
-          <option value="Значение10">Prolog</option>
-          <option value="Значение11">Scala</option>
-        </select>
-      </label><br />
-    <label>
-        Биография:<br />
-        <textarea name="field-name-2"></textarea>
-      </label><br />
+            <input type="submit" value="Отправить" />
+        </form>
+    </div>
 
+    <script>
+        function validateForm() {
+            // Сбрасываем предыдущие сообщения об ошибках
+            document.getElementById("errorFieldname1").innerText = "";
+            document.getElementById("errorFieldemail").innerText = "";
+            document.getElementById("errorFielddate").innerText = "";
+            document.getElementById("errorFieldname2").innerText = "";
+            document.getElementById("errorFieldname3").innerText = "";
 
+            let isValid = true;
 
-    <br />
-    <label><input type="checkbox" checked="checked"
-      name="check-1" />
-    С контрактом ознакомлен (а)</label><br />
+            // Проверка поля "Однострочное текстовое поле"
+            const fieldname1 = document.getElementById("fieldname1").value;
+            if (fieldname1.trim() === "") {
+                document.getElementById("errorFieldname1").innerText = "Это поле обязательно для заполнения.";
+                isValid = false;
+            }
 
-    <input type="submit" value="Сохранить" />
-  </form>
+            // Проверка поля "email"
+            const email = document.getElementById("fieldemail").value;
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                document.getElementById("errorFieldemail").innerText = "Введите корректный адрес электронной почты.";
+                isValid = false;
+            }
+
+            // Проверка поля "даты"
+            const fielddate = document.getElementById("fielddate").value;
+            if (fielddate.trim() === "") {
+                document.getElementById("errorFielddate").innerText = "Это поле обязательно для заполнения.";
+                isValid = false;
+            }
+
+            // Проверка многострочного текстового поля
+            const fieldname2 = document.getElementById("fieldname2").value;
+            if (fieldname2.trim() === "") {
+                document.getElementById("errorFieldname2").innerText = "Это поле обязательно для заполнения.";
+                isValid = false;
+            }
+
+            // Проверка поля combobox
+            const fieldname3 = document.getElementById("fieldname3").value;
+            if (fieldname3 === "") {
+                document.getElementById("errorFieldname3").innerText = "Выберите значение из списка.";
+                isValid = false;
+            }
+
+            return isValid; // Возвращаем true, если все проверки пройдены
+        }
+    </script>
 </body>
 </html>
-
 Конец HTML кода
